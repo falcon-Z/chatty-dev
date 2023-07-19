@@ -1,1 +1,7 @@
-<script>import "../app.postcss";</script><slot></slot>
+<script>
+	import '../app.postcss';
+</script>
+
+<main class="grid h-screen w-full place-items-center">
+	<slot />
+</main>

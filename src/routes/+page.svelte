@@ -1,2 +1,7 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import LandingPage from '$lib/components/landingPage.svelte';
+</script>
+
+<div class="flex justify-center items-center gap-8 flex-col">
+	<LandingPage />
+</div>
