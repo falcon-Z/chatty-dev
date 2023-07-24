@@ -1,5 +1,5 @@
 <script>
-	import Login from '$lib/components/auth/login.svelte';
+	import Login from './login.svelte';
 	import BackgroundGradient from '$lib/components/backgroundGradient.svelte';
 </script>
 
