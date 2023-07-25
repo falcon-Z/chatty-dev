@@ -1,12 +1,16 @@
 <script lang="ts">
-	import { createQuery } from '@tanstack/svelte-query';
-	import { getUser } from '$lib/helpers';
+	import type { LayoutData } from './$types';
+	import { goto } from '$app/navigation';
 
-	const user = createQuery({
-		queryKey: ['user'],
-		queryFn: () => getUser(),
-		retry: false
-	});
+	export let data: LayoutData;
+
+	if (data.user?.$id) {
+		goto('app');
+	}
 </script>
 
-<slot />
+<main class="relative grid h-screen w-full place-items-center">
+	<slot />
+</main>
+
+{@debug data}

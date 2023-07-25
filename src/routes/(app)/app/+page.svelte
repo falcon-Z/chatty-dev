@@ -1,7 +1,6 @@
 <script lang="ts">
-	import type { PageData } from './$types';
-
-	export let data: PageData;
+	import Logout from '$lib/components/logout.svelte';
 </script>
 
-<h1>App</h1>
+<h1 class="text-7xl relative">welcome to the app</h1>
+<Logout />
