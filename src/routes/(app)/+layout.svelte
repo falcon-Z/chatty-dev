@@ -1,16 +1,16 @@
 <script lang="ts">
-	import type { LayoutData } from './$types';
 	import { goto } from '$app/navigation';
+	import type { LayoutData } from './$types';
 
 	export let data: LayoutData;
 
-	if (data.user?.$id) {
-		goto('app');
+	if (!data.user?.$id) {
+		goto('auth');
 	}
 </script>
 
-<main class="relative grid h-screen w-full place-items-center">
-	<slot />
-</main>
-
-{@debug data}
+<div class="container h-full w-full border border-base-200 p-4 m-1 rounded-3xl">
+	<slot>
+		<a href="profile">Go to Profile</a>
+	</slot>
+</div>
