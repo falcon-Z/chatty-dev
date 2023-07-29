@@ -10,7 +10,7 @@ export const load = (async ({ parent, fetch }) => {
 	const accessToken = await (await account.getSession('current')).providerAccessToken;
 
 	if (user) {
-		if (Object.keys(user.prefs) != null) {
+		if (Object.keys(user.prefs).length == 0) {
 			if (authProvider == 'github') {
 				const githubProfileData = await fetch('https://api.github.com/user', {
 					headers: {

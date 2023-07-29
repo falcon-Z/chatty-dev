@@ -12,6 +12,6 @@
 	}
 </script>
 
-<main class="relative grid h-screen w-full place-items-center">
+<main class="relative grid h-screen p-1 w-full place-items-center">
 	<slot />
 </main>
